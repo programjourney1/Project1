@@ -1,0 +1,71 @@
+drop table Enviros;
+drop table Pokemon;
+select * FROM Lizards;
+truncate table Lizards;
+truncate table Snakes;
+truncate table Enviros;
+truncate table Turtles ;
+truncate table Crocs ;
+truncate table Reptiles;
+
+CREATE TABLE Lizards(
+Species varchar(255) primary key, Description varchar(255)  
+);
+insert into Lizards(Species, Description)
+values
+( 'Rattata', 'Bites anything when it attacks. Small and very quick, it is a common sight in many places.'),
+('Raticate', '	It uses its whiskers to maintain its balance. It apparently slows down if they are cut off.'),
+('Jigglypuff', 'When its huge eyes light up, it sings a mysteriously soothing melody that lulls its enemies to sleep.');
+
+CREATE TABLE Turtles(
+Species varchar(255) primary key, Description varchar(255)  
+);
+insert into Turtles(Species, Description)
+values
+
+('Nidoran Male', 'Stiffens its ears to sense danger. The larger its horns, the more powerful its secreted venom.'),
+( 'Nidoran Female', 'Although small, its venomous barbs render this Pokémon dangerous. The female has smaller horns.'),
+( 'Nidorino','An aggressive Pokémon that is quick to attack. The horn on its head secretes a powerful venom.');
+
+CREATE TABLE Crocs(
+Species varchar(255) primary key, Description varchar(255)  
+);
+insert into Crocs(Species, Description)
+values
+('Pidgey', 'A common sight in forests and woods. It flaps its wings at ground level to kick up blinding sand.'),
+('Spearow', 'Eats bugs in grassy areas. It has to flap its short wings at high speed to stay airborne.'),
+('Fearrow', 'With its huge and magnificent wings, it can keep aloft without ever having to land for rest.');
+
+CREATE TABLE Snakes(
+Species varchar(255) primary key, Description varchar(255)  
+);
+insert into Snakes(Species, Description)
+values
+('Metapod','This Pokémon is vulnerable to attack while its shell is soft, exposing its weak and tender body.'),
+('Weedle', 'Often found in forests, eating leaves. It has a sharp venomous stinger on its head.'),
+('Caterpie', 'Its short feet are tipped with suction pads that enable it to tirelessly climb slopes and walls.');
+
+CREATE TABLE Pokemon(Species varchar(255) primary key, Description varchar(255));
+Insert INTO Pokemon(Species, Description)
+values 
+( 'Rattata', 'Bites anything when it attacks. Small and very quick, it is a common sight in many places.'),
+('Raticate', '	It uses its whiskers to maintain its balance. It apparently slows down if they are cut off.'),
+('Jigglypuff', 'When its huge eyes light up, it sings a mysteriously soothing melody that lulls its enemies to sleep.'),
+('NidoranMale', 'Stiffens its ears to sense danger. The larger its horns, the more powerful its secreted venom.'),
+( 'NidoranFemale', 'Although small, its venomous barbs render this Pokémon dangerous. The female has smaller horns.'),
+( 'Nidorino','An aggressive Pokémon that is quick to attack. The horn on its head secretes a powerful venom.'),
+('Pidgey', 'A common sight in forests and woods. It flaps its wings at ground level to kick up blinding sand.'),
+('Spearow', 'Eats bugs in grassy areas. It has to flap its short wings at high speed to stay airborne.'),
+('Fearrow', 'With its huge and magnificent wings, it can keep aloft without ever having to land for rest.'),
+('Metapod','This Pokémon is vulnerable to attack while its shell is soft, exposing its weak and tender body.'),
+('Weedle', 'Often found in forests, eating leaves. It has a sharp venomous stinger on its head.'),
+('Caterpie', 'Its short feet are tipped with suction pads that enable it to tirelessly climb slopes and walls.')
+;
+
+Create Table Loc(Enviroment varchar(255), Species varchar(255) Primary key);
+insert into Loc(Enviroment, Species)
+values
+('RT 1,2', 'Rattata'),('RT 16, 18', 'Raticate'),('Mount Moon', 'Jigglypuff'),
+('RT 2,3', 'NidoranMale'),('RT 2,3', 'NidoranFemale'),('Safari Zone', 'Nidorino'),
+('RT 1, 2, 3', 'Pidgey'),('RT 3', 'Spearow'),('RT 3', 'Fearow'),
+('Viridian Forest', 'Metapod'),('Viridian Forest', 'Caterpie'),('Viridian Forest', 'Weedle');
